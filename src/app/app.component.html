@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col">
+      <div class="card text-center border-dark mb-3" >  
+        <div>
+          <app-first></app-first>
+        </div>
+        <div>
+          <app-member-card [member]=item *ngFor="let item of memberService.result"></app-member-card>
+        </div>
+      </div>  
+    </div>       
+    <div class="col">
+      <div class="card text-center border-dark mb-3" >  
+        <div class="card-body">
+            <h1>Summary</h1>
+            <p>Total expenses = {{memberService.calc}}</p>
+        </div>
+      </div>  
+    </div>
+</div>

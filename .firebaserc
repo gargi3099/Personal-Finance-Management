@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-project-d3c49": {
+      "hosting": {
+        "firstproject": [
+          "angular-project-d3c49"
+        ]
+      }
+    }
+  }
+}

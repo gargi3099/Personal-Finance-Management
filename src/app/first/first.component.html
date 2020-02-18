@@ -1,0 +1,7 @@
+<div style="align-content: center;">
+    <label>Amount</label>
+    <input class="form-control" type="text" placeholder="Enter amount" [(ngModel)]="memberService.object.amount"><br>
+    <label>Description</label>
+    <input class="form-control" type="text" placeholder="Enter description" [(ngModel)]="memberService.object.desc"><br>
+    <button class="btn btn-dark" (click)="memberService.addData()">Add Expense</button>
+</div>
