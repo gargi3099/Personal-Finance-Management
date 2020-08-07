@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <div class="card text-center text-white bg-sign" >
+            <form (ngSubmit)=signIn(signInData) #signInData="ngForm">
+                <div class="card-body">
+                    <h2>Sign in</h2>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input #email="ngModel" name="email" ngModel type="email" class="form-control" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input  #password="ngModel" name="password" ngModel type="password" class="form-control">
+                    </div>
+                        <button type="submit" class="btn btn-primary">Sign in</button><br><br>
+                        <p>Don't have an account?
+                        <button routerLink="/signup" class="btn btn-dark mx-2">Sign up</button></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-3"></div>
+</div>

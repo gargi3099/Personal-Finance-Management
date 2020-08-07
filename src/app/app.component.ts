@@ -2,17 +2,14 @@ import { Component } from '@angular/core';
 import { element } from 'protractor';
 import { MemberService } from './member.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'firstproject';
-  regForm={enteredName:'', email:'', pswd:'', phone:''}
-  result1=[]
-  
-  constructor(public memberService:MemberService){
+    constructor(){
 
   }
  /* addName(){

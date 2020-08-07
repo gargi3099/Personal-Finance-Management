@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url(/assets/bg.jpg);
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+.bg-card {
+    /* The image used */
+    background-image: url(/assets/bg-card1.jpg);
+    /* Full height */
+    height: auto;
+    /* Center and scale the image nicely */
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  .bg-add {
+    /* The image used */
+    background-image: url(/assets/bg1.jpg);
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  .bg-sum {
+    /* The image used */
+    background-image: url(/assets/bg-card.jpg);
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  .bg-sign {
+    /* The image used */
+    background-image: url(/assets/sign.jpg);
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  .red:hover{
+    color: red;
+  }

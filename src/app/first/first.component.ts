@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberService } from '../member.service';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { Details } from 'src/models/structure.model';
 
 @Component({
   selector: 'app-first',
@@ -7,17 +10,20 @@ import { MemberService } from '../member.service';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit {
-  enteredName=""
-  email=""
-  pswd=""
-  phone=""
+  object1:Details={amount:0 ,desc:'',createdBy:'',timestamp:new Date()}
   result1=[]
-  constructor(public memberService:MemberService) { 
+  constructor(public memberService:MemberService,public router:Router) { 
      //alert("Host says hello!")
   }
 
   ngOnInit() {
     
+  }
+
+  addMember(){
+    this.memberService.addData(this.object1)
+    this.object1={amount:0,desc:'',createdBy:'',timestamp:new Date()}
+    this.router.navigateByUrl('/home')
   }
 /*
   addName(){
@@ -30,4 +36,11 @@ export class FirstComponent implements OnInit {
      console.log(this.result)
     
   }*/
+
+  submitCall(formData:NgForm){
+    console.log(formData)
+    this.memberService.addData(formData.value)
+    formData.resetForm()
+    this.router.navigateByUrl('/home')
+  }
 }

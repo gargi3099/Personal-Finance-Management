@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-lg-3"> </div>
+    <div class="col-lg-6">
+        <div class="card text-center text-black bg-card" >  
+            <div class="card-body">
+                <h2>Expense Details:-</h2>
+                <p><b>Amount :</b>{{member.amount}}</p>
+                <p><b>Description :</b>{{member.desc | uppercase}}</p>
+                <!-- <p><b>Name of creator :</b>{{name | test:"user1"}}</p> -->
+                <p><b>Date :</b>{{member.timestamp | date}}</p>
+                <button routerLink="/home" class="btn btn-danger">Back</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3"> </div>
+</div>

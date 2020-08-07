@@ -1,7 +1,38 @@
-<div style="align-content: center;">
-    <label>Amount</label>
-    <input class="form-control" type="text" placeholder="Enter amount" [(ngModel)]="memberService.object.amount"><br>
-    <label>Description</label>
-    <input class="form-control" type="text" placeholder="Enter description" [(ngModel)]="memberService.object.desc"><br>
-    <button class="btn btn-dark" (click)="memberService.addData()">Add Expense</button>
+<!-- <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <div class="card text-center text-black bg-add" >
+          <div class="card-body">
+            <div style="align-content: center;">
+                <label>Amount</label>
+                <input class="form-control" type="number" placeholder="Enter amount" [(ngModel)]="object1.amount"><br>
+                <label>Description</label>
+                <input class="form-control" type="text" placeholder="Enter description" [(ngModel)]="object1.desc"><br>
+                <button class="btn btn-dark btn-block" (click)="addMember()">Add Expense</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div> -->
+<div class="row">
+  <div class="col-lg-3"></div>
+  <div class="col-lg-6">
+      <div class="card text-center text-black bg-add" >
+        <div class="card-body">
+          <div style="align-content: center;">
+              <form (ngSubmit)="submitCall(memberObject)" #memberObject="ngForm">
+                <label>Amount</label>
+                <input class="form-control" name="amount" #amount="ngModel" type="number" required placeholder="Enter amount" ngModel><br>
+                <p style="color: red;" *ngIf="!amount.valid">*Input required</p>
+                <label>Description</label>
+                <input class="form-control" name="desc" #desc="ngModel" type="text" required placeholder="Enter description" ngModel><br>
+                <p style="color: red;" *ngIf="!desc.valid">*Input required</p>
+                <button [disabled]="!memberObject.valid" class="btn btn-dark btn-block" type="submit">Add Expense</button>
+              </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3"></div>
+  </div>
 </div>

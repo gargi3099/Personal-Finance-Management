@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-3">
+      <div class="card text-center bg-card" >  
+        <div>
+          <app-member-card [member]=item *ngFor="let item of memberService.result"></app-member-card>
+          <h4 *ngIf="memberService.result.length==0">No Expenses found!<br> Please add expense to continue.
+          <button routerLink="/home/add-member" class="btn btn-warning">Add Expense</button>
+        </h4>
+        </div>
+      </div>  
+    </div>       
+    <div class="col-lg-3">
+     </div>
+</div>

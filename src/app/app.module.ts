@@ -11,6 +11,19 @@ import { MemberChildComponent } from './member-card/member-child/member-child.co
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import 'firebase/firestore';
+import { auth } from 'firebase/app';
+import { NavbarComponent } from './shared-components/navbar/navbar.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { HomeComponent } from './home/home.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SummaryComponent } from './summary/summary.component';
+import { MemberDetailsComponent } from './member-details/member-details.component';
+import { AuthComponent } from './auth/auth.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestPipe } from './test.pipe';
 
 @NgModule({
   declarations: [
@@ -19,14 +32,25 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     SecondComponent,
     RegistrationComponent,
     MemberCardComponent,
-    MemberChildComponent
+    MemberChildComponent,
+    NavbarComponent,
+    SigninComponent,
+    HomeComponent,
+    SignupComponent,
+    SummaryComponent,
+    MemberDetailsComponent,
+    AuthComponent,
+    TestPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAnalyticsModule,
+    AngularFireAuthModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

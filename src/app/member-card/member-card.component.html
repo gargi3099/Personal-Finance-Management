@@ -1,14 +1,24 @@
-<div class="card text-center text-white bg-info mb-3 border-dark mb-3" >
+<div class="card text-center text-black bg-card" >
   <div class="card-body">
-    <div class="row">
-      <div class="col" style="text-align: left;">
-        <h5 class="card-title">Expense details-</h5>
-        <p class="card-text">Amount = {{data.amount}}</p>
-        <p class="card-text">Description = {{data.desc}}</p>
+    <div class="row"  style="text-align: left;">
+      <div *ngIf="!isformvisible">
+        <div class="col">
+          <h5 class="card-title" class="red" (click)="sendToMemberDetails()">Expense: {{data.desc}}</h5>
+          <!-- <p class="card-text">Description = {{data.desc}}</p> -->
+        </div>
+        <div class="col" style="margin-top:30px">
+          <button (click)="delete()" class="btn" style="width: 100px;"><img src="/assets/delicon.jpg" style="width: 40%; height: 40%;"></button>
+          <button (click)="onUpdateClicked()" class="btn" style="width: 100px;"><img src="/assets/editicon.jpg" style="width: 40%; height: 40%;"></button>
+        </div>
       </div>
-      <div class="col" style="margin-top:30px">
-        <button (click)="delete()" class="btn btn-danger">Delete</button> 
-      </div>
+      <div *ngIf="isformvisible" >
+        <label>Amount</label>
+        <input class="form-control" type="text" placeholder="Enter amount" [(ngModel)]="editObject.amount"><br>
+        <label>Description</label>
+        <input class="form-control" type="text" placeholder="Enter description" [(ngModel)]="editObject.desc"><br>
+        <button class="btn" (click)="update()" style="width: 100px;"><img src="/assets/right.png" style="width: 40%; height: 40%;"></button>
+        <button class="btn" (click)="onUpdateClicked()" style="width: 100px;"><img src="/assets/wrong.png" style="width: 40%; height: 40%;"></button>
+    </div>
     </div>
   </div>
 </div>
