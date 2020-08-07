@@ -43,6 +43,7 @@ export class MemberService {
 
   updateData(id,data){
     this.db.collection("members").doc(id).set(data);
+  
   }
 
   getAppMembers(){
